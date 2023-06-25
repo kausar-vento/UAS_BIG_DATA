@@ -3,6 +3,8 @@
   <li>Muhamad Al Kausar Ramadhan / 11</li>
   <li>Raihan Hidayatullah Djunaedi / 14</li>
 </ol>
+<h1>Link Papper</h1>
+<p><a href="https://docs.google.com/document/d/10tetIfvd62SKziAbxYY1VwlFdeGprebNv7p-1xOThKE/edit?usp=sharing">Link Papper</a></p>
  <h1>Cara Setup</h1>
 <ul>
   <li>Mengimpor dataset pengangguran: Langkah pertama adalah mengimpor dataset pengangguran yang berisi informasi pengangguran di berbagai kabupaten, termasuk Kabupaten Bekasi.</li>
@@ -17,5 +19,3 @@
 </ul>
 <h1>Hasil Pratikum</h1>
 <img src="hasil pratikum.PNG" />
-<h1>Link Papper</h1>
-<p><a href="https://docs.google.com/document/d/10tetIfvd62SKziAbxYY1VwlFdeGprebNv7p-1xOThKE/edit?usp=sharing">Link Papper</a></p>
