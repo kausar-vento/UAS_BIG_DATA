@@ -16,4 +16,6 @@
   <li>Menghitung akurasi model menggunakan metrik RMSE dan R-squared: Setelah melakukan prediksi, Anda dapat mengukur akurasi model regresi linear dengan menggunakan metrik evaluasi seperti Root Mean Squared Error (RMSE) dan R-squared. RMSE digunakan untuk mengukur sejauh mana nilai prediksi mendekati nilai sebenarnya, sedangkan R-squared mengindikasikan seberapa baik model cocok dengan data yang ada.</li>
 </ul>
 <h1>Hasil Pratikum</h1>
-<img src=""
+<img src="hasil pratikum.PNG" />
+<h1>Link Papper</h1>
+<p><a href="https://docs.google.com/document/d/10tetIfvd62SKziAbxYY1VwlFdeGprebNv7p-1xOThKE/edit?usp=sharing">Link Papper</a></p>
