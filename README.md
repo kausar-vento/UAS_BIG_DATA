@@ -56,10 +56,10 @@
 </ul>
 <h4>Dengan demikian, proyek ini menggabungkan analisis data, visualisasi, dan prediksi menggunakan Apache Spark dan metode regresi linear untuk menganalisis jumlah pengangguran di Kabupaten Bekasi dan meramalkan kenaikan pengangguran di masa depan.</h4>
 <h1>Hasil Pratikum</h1>
-<img src="docs/tabel pertama.png" />
+<img src = 'docs/tabel pertama.png' width=40% height=40%/>
 <br>
-<img src="docs/visualisasi pertama.png" />
+<img src="docs/visualisasi pertama.png" width=40% height=40%/>
 <br>
-<img src="docs/tabel kedua.png" />
+<img src="docs/tabel kedua.png" width=40% height=40%/>
 <br>
-<img src="docs/visualisasi kedua.png" />
+<img src="docs/visualisasi kedua.png" width=40% height=40%/>
