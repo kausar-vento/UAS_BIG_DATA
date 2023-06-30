@@ -6,7 +6,9 @@
 <h1>Link Papper</h1>
 <p><a href="https://docs.google.com/document/d/10tetIfvd62SKziAbxYY1VwlFdeGprebNv7p-1xOThKE/edit?usp=sharing">Link Papper</a></p>
 <h1>Penjelasan Proyek</h1>
+<ul>
 <li>Proyek ini bertujuan untuk menganalisis data pengangguran di Kabupaten Bekasi dan melakukan prediksi persentase kenaikan pengangguran di masa depan menggunakan metode regresi linear. Data pengangguran dikumpulkan dari sumber yang relevan dan tersedia dalam format CSV. Proses analisis terdiri dari dua bagian utama: visualisasi jumlah pengangguran dari tahun 2011 hingga 2022, dan prediksi persentase kenaikan pengangguran untuk lima tahun ke depan.</li>
+</ul>
 <h1>Cara Setup</h1>
 <ul>
   <li>Pertama, kita memasang library pyspark dengan menjalankan perintah !pip install pyspark untuk memastikan bahwa kita memiliki modul yang diperlukan untuk mengakses dan menganalisis data dengan menggunakan Apache Spark.</li>
