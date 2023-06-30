@@ -5,18 +5,50 @@
 </ol>
 <h1>Link Papper</h1>
 <p><a href="https://docs.google.com/document/d/10tetIfvd62SKziAbxYY1VwlFdeGprebNv7p-1xOThKE/edit?usp=sharing">Link Papper</a></p>
- <h1>Cara Setup</h1>
+<h1>Penjelasan Proyek</h1>
+<li>Proyek ini bertujuan untuk menganalisis data pengangguran di Kabupaten Bekasi dan melakukan prediksi persentase kenaikan pengangguran di masa depan menggunakan metode regresi linear. Data pengangguran dikumpulkan dari sumber yang relevan dan tersedia dalam format CSV. Proses analisis terdiri dari dua bagian utama: visualisasi jumlah pengangguran dari tahun 2011 hingga 2022, dan prediksi persentase kenaikan pengangguran untuk lima tahun ke depan.</li>
+<h1>Cara Setup</h1>
 <ul>
-  <li>Mengimpor dataset pengangguran: Langkah pertama adalah mengimpor dataset pengangguran yang berisi informasi pengangguran di berbagai kabupaten, termasuk Kabupaten Bekasi.</li>
-  <li>Melakukan filter dataset untuk Kabupaten Bekasi: Setelah mengimpor dataset, Anda perlu melakukan filter untuk memilih data yang terkait dengan Kabupaten Bekasi saja. Hal ini dilakukan dengan memfilter baris-baris yang memiliki nilai kabupaten sama dengan "Bekasi".</li>
-  <li>Mengelompokkan data berdasarkan tahun dan menghitung jumlah pengangguran: Selanjutnya, Anda perlu mengelompokkan data berdasarkan tahun, dan menghitung jumlah pengangguran dalam setiap tahun. Ini dapat dilakukan dengan menggunakan fungsi agregasi seperti sum() pada kolom pengangguran, setelah Anda melakukan operasi pengelompokan berdasarkan kolom tahun.</li>
-  <li>Melakukan preprocessing pada dataset dengan menggunakan VectorAssembler: Sebelum membangun model regresi linear, Anda perlu melakukan preprocessing pada dataset. Salah satu tahap preprocessing yang umum dilakukan pada data numerik adalah menggabungkan fitur-fitur menjadi satu vektor menggunakan VectorAssembler. Dalam hal ini, Anda dapat menggabungkan fitur tahun menjadi satu kolom vektor.</li>
-  <li>Membangun model regresi linear: Setelah preprocessing selesai, Anda dapat membangun model regresi linear menggunakan dataset yang telah diproses. Model regresi linear digunakan untuk memodelkan hubungan antara variabel independen (tahun) dengan variabel dependen (jumlah pengangguran). Anda dapat menggunakan pustaka atau framework pemodelan yang mendukung regresi linear, seperti scikit-learn di Python.</li>
-  <li>Membuat dataframe untuk melakukan prediksi pengangguran 5 tahun ke depan di Kabupaten Bekasi: Setelah model regresi linear selesai dilatih, Anda dapat menggunakan model tersebut untuk melakukan prediksi jumlah pengangguran di Kabupaten Bekasi 5 tahun ke depan. Untuk ini, Anda dapat membuat dataframe yang berisi 5 tahun ke depan (misalnya dari tahun sekarang hingga 5 tahun ke depan) dan menggunakan model untuk memprediksi jumlah pengangguran di setiap tahun.</li>
-  <li>Mengubah hasil prediksi menjadi persentase: Setelah mendapatkan hasil prediksi jumlah pengangguran, Anda dapat mengubah nilai-nilai tersebut menjadi persentase. Hal ini dapat dilakukan dengan membagi setiap nilai prediksi dengan total populasi atau angkatan kerja di Kabupaten Bekasi pada tahun yang bersangkutan, lalu dikalikan dengan 100.</li>
-  <li>Menampilkan prediksi jumlah pengangguran 5 tahun ke depan di Kabupaten Bekasi: Setelah mengubah hasil prediksi menjadi persentase, Anda dapat menampilkan prediksi jumlah pengangguran 5 tahun ke depan di Kabupaten Bekasi dalam bentuk grafik atau tabel, agar lebih mudah dipahami dan divisualisasikan</li>
-  <li>Menghitung akurasi model menggunakan metrik RMSE dan R-squared: Setelah melakukan prediksi, Anda dapat mengukur akurasi model regresi linear dengan menggunakan metrik evaluasi seperti Root Mean Squared Error (RMSE) dan R-squared. RMSE digunakan untuk mengukur sejauh mana nilai prediksi mendekati nilai sebenarnya, sedangkan R-squared mengindikasikan seberapa baik model cocok dengan data yang ada.</li>
+  <li>Pertama, kita memasang library pyspark dengan menjalankan perintah !pip install pyspark untuk memastikan bahwa kita memiliki modul yang diperlukan untuk mengakses dan menganalisis data dengan menggunakan Apache Spark.</li>
+  <li>Selanjutnya, kita mengimpor beberapa modul yang diperlukan, seperti SparkSession dari pyspark.sql untuk menginisialisasi sesi Spark, dan matplotlib.pyplot untuk melakukan visualisasi grafik.</li>
+  <li>Kita juga mengimpor modul lainnya seperti VectorAssembler dan LinearRegression dari pyspark.ml.feature dan pyspark.ml.regression secara berturut-turut, yang akan digunakan untuk membangun model prediksi persentase kenaikan pengangguran.</li>
 </ul>
+<h1>Cara Running</h1>
+<ul>
+  <li>Setelah setup selesai, kita dapat memulai dengan membaca dataset pengangguran dari file CSV yang tersimpan di Google Drive atau lokasi yang sesuai.</li>
+  <li>Dataset tersebut kemudian difilter untuk Kabupaten Bekasi, sehingga hanya data yang relevan yang akan digunakan dalam analisis dan prediksi.</li>
+  <li>Langkah berikutnya adalah mengelompokkan data berdasarkan tahun menggunakan fungsi groupBy dan menghitung jumlah pengangguran dengan menggunakan fungsi sum.</li>
+  <li>Setelah itu, kita akan mengurutkan tabel hasil berdasarkan tahun secara menaik menggunakan orderBy.</li>
+  <li>Tabel hasil jumlah pengangguran akan ditampilkan untuk memberikan gambaran data yang telah diolah.</li>
+  <li>Selanjutnya, kita akan memvisualisasikan data pengangguran dari tahun 2011 hingga 2022 menggunakan matplotlib.pyplot. Grafik garis akan digunakan dengan sumbu x sebagai tahun dan sumbu y sebagai jumlah pengangguran.</li>
+  <li>Setelah visualisasi selesai, kita akan memulai proses prediksi persentase kenaikan pengangguran.</li>
+  <li>Data 10 tahun terakhir (2011-2022) akan dipilih dan digunakan untuk melatih model regresi linear menggunakan LinearRegression.</li>
+  <li>Sebuah vektor fitur akan dibuat menggunakan VectorAssembler untuk mengubah fitur tahun menjadi vektor yang dapat digunakan oleh model.</li>
+  <li>Model regresi linear akan dibangun dengan fitur sebagai vektor tahun dan label sebagai jumlah pengangguran.</li>
+  <li>Dengan model yang telah dilatih, kita dapat melakukan prediksi jumlah pengangguran untuk 5 tahun ke depan menggunakan data tahun terakhir yang ada.</li>
+  <li>Persentase kenaikan pengangguran dihitung dengan membandingkan prediksi dengan jumlah pengangguran terakhir dalam dataset.</li>
+  <li>Prediksi persentase kenaikan pengangguran untuk 5 tahun ke depan akan ditampilkan untuk memberikan gambaran tren yang diharapkan.</li>
+  <li>Akurasi prediksi diukur menggunakan metrik seperti Mean Squared Error (MSE) dan R-squared untuk mengevaluasi performa model regresi linear yang telah dibangun.</li>
+</ul>
+<h1>Penjelasan Metode</h1>
+<h2>Visualisasi Jumlah Pengangguran</h2>
+<li>Dataset pengangguran difilter untuk Kabupaten Bekasi agar hanya data yang relevan yang digunakan dalam analisis.</li>
+<li>Data jumlah pengangguran dikelompokkan berdasarkan tahun menggunakan fungsi groupBy dan diurutkan secara menaik menggunakan orderBy.</li>
+<li>Tabel hasil jumlah pengangguran akan ditampilkan untuk memberikan gambaran data yang telah diolah.</li>
+<li>Visualisasi dilakukan dengan menggunakan matplotlib.pyplot untuk membuat grafik garis yang menunjukkan perubahan jumlah pengangguran dari tahun ke tahun.</li>
+<br>
+<h2>Prediksi Persentase Kenaikan Pengangguran</h2>
+<li>Dataset pengangguran difilter untuk Kabupaten Bekasi agar hanya data yang relevan yang digunakan dalam analisis.</li>
+<li>Data jumlah pengangguran dikelompokkan berdasarkan tahun menggunakan fungsi groupBy dan diurutkan secara menaik menggunakan orderBy.</li>
+<li>Data 10 tahun terakhir (2011-2022) dipilih untuk melatih model prediksi.</li>
+<li>Preprocessing dilakukan dengan mengubah fitur tahun menjadi vektor menggunakan VectorAssembler.</li>
+<li>Model regresi linear dibangun menggunakan LinearRegression dengan fitur sebagai vektor tahun dan label sebagai jumlah pengangguran.</li>
+<li>Prediksi dilakukan untuk 5 tahun ke depan menggunakan data tahun terakhir yang ada.</li>
+<li>Persentase kenaikan pengangguran dihitung dengan membandingkan prediksi dengan jumlah pengangguran terakhir dalam dataset.</li>
+<li>Prediksi persentase kenaikan pengangguran untuk 5 tahun ke depan akan ditampilkan untuk memberikan gambaran tren yang diharapkan.</li>
+<li>Akurasi prediksi diukur menggunakan metrik seperti Mean Squared Error (MSE) dan R-squared untuk mengevaluasi performa model regresi linear yang telah dibangun.</li>
+<br>
+<h4>Dengan demikian, proyek ini menggabungkan analisis data, visualisasi, dan prediksi menggunakan Apache Spark dan metode regresi linear untuk menganalisis jumlah pengangguran di Kabupaten Bekasi dan meramalkan kenaikan pengangguran di masa depan.</h4>
 <h1>Hasil Pratikum</h1>
 <img src="docs/hasil prediksi.PNG" />
 <img src="docs/hasil pratikum.PNG" />
