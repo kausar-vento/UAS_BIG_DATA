@@ -31,13 +31,13 @@
   <li>Akurasi prediksi diukur menggunakan metrik seperti Mean Squared Error (MSE) dan R-squared untuk mengevaluasi performa model regresi linear yang telah dibangun.</li>
 </ul>
 <h1>Penjelasan Metode</h1>
-<h2>Visualisasi Jumlah Pengangguran</h2>
+<h2>1. Visualisasi Jumlah Pengangguran</h2>
 <li>Dataset pengangguran difilter untuk Kabupaten Bekasi agar hanya data yang relevan yang digunakan dalam analisis.</li>
 <li>Data jumlah pengangguran dikelompokkan berdasarkan tahun menggunakan fungsi groupBy dan diurutkan secara menaik menggunakan orderBy.</li>
 <li>Tabel hasil jumlah pengangguran akan ditampilkan untuk memberikan gambaran data yang telah diolah.</li>
 <li>Visualisasi dilakukan dengan menggunakan matplotlib.pyplot untuk membuat grafik garis yang menunjukkan perubahan jumlah pengangguran dari tahun ke tahun.</li>
 <br>
-<h2>Prediksi Persentase Kenaikan Pengangguran</h2>
+<h2>2. Prediksi Persentase Kenaikan Pengangguran</h2>
 <li>Dataset pengangguran difilter untuk Kabupaten Bekasi agar hanya data yang relevan yang digunakan dalam analisis.</li>
 <li>Data jumlah pengangguran dikelompokkan berdasarkan tahun menggunakan fungsi groupBy dan diurutkan secara menaik menggunakan orderBy.</li>
 <li>Data 10 tahun terakhir (2011-2022) dipilih untuk melatih model prediksi.</li>
